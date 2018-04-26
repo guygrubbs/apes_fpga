@@ -15,8 +15,7 @@
 `timescale 1 ns / 1 ns 
 
 module dac_adc_top (
-     clk50, rst_n, reset_cmd,
-     hven_cmd, safe_cmd, dac_cmd,
+     clk50, rst_n, hven_cmd, safe_cmd, dac_cmd,
      Dac1_sck, Dac1_sdi, Dac1_sync_n, 
      Mcp_dac_clk, Mcp_dac_sdi, Mcp_dac_cs, 
      Adc_sdo, Adc_cs1, Adc_cs2, Adc_clk, Adc_sdi,
@@ -240,7 +239,7 @@ case (dac_sm)
 
   1'b0: begin
       dac_rst <= 1'b0;
-      if (hven_cmd & ~safe_cmd ) //& ~reset_cmd) // hven low enables 
+      if (hven_cmd & ~safe_cmd)
       begin
         dac_pulse <= 1'b0;
         hven <= 1'b1;
@@ -313,7 +312,7 @@ case (dac_sm)
        end
      end
   1'b1: begin
-    if (reset_cmd) 
+    if (!rst_n) 
     begin
       dac_rst <= 1'b1;
       dac_sm <= 1'b0;
@@ -331,6 +330,5 @@ else
   clock_div <= clock_div + 1;
 
 CLKINT  clkb  (.A(clock_div[7]),  .Y(clk195khz));  
-
 
 endmodule

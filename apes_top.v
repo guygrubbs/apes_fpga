@@ -61,18 +61,20 @@ input         Hk_Invload;            // HK Inverted Load
 
 
 
-reg reg1, rstn;
+reg reg1, rstn, rock_resetn;
 wire        clk50;
 wire [9:0]  Counts[51:0];
 wire [9:0]  Hk_words[9:0];
 wire        Safe_cmd_sync;
 wire        Stim_cmd_n_sync;
-wire        Reset_cmd_n_sync;
+
+wire gse_resetn, rock_resetn;
 
 assign gse_resetn = !Gse_reset;
+assign rock_resetn = Reset_cmd_n;
 
-always @(posedge clk50 or negedge gse_resetn)
-  if(!gse_resetn)
+always @(posedge clk50 or negedge gse_resetn or negedge rock_resetn)
+  if(!gse_resetn or !rock_resetn)
   begin
     reg1     <= 0;
     rstn     <= 0;
@@ -83,32 +85,26 @@ always @(posedge clk50 or negedge gse_resetn)
   end
 
 BUFD   bufr1 (.A(rstn),   .Y(rst_n));
+
 CLKBUF clka (.PAD(Ext_clk_50mhz), .Y(clk50));
 
 sync sync_safe (
   .clk            (clk50),         
-  .rst_n          (rst_n || Reset_cmd_n_sync),        
+  .rst_n          (rst_n),        
   .async_in       (Safe_cmd),     
   .sync_out       (Safe_cmd_sync)       
 );
 
 sync sync_stim (
   .clk            (clk50),       
-  .rst_n          (rst_n || Reset_cmd_n_sync),      
+  .rst_n          (rst_n),      
   .async_in       (Stim_cmd_n), 
   .sync_out       (Stim_cmd_n_sync)       
 );
 
-sync sync_reset (
-  .clk            (clk50),     
-  .rst_n          (rst_n),    
-  .async_in       (Reset_cmd_n),
-  .sync_out       (Reset_cmd_n_sync)       
-);
-
 sync sync_hven (
   .clk            (clk50),     
-  .rst_n          (rst_n || Reset_cmd_n_sync),    
+  .rst_n          (rst_n),    
   .async_in       (Hven_cmd_n),
   .sync_out       (Hven_cmd_n_sync)       
 );
@@ -116,7 +112,7 @@ sync sync_hven (
 
 rocket_readout u_rocket_readout(
 .clk50          (clk50), 
-.rst_n          (rst_n || Reset_cmd_n_sync), 
+.rst_n          (rst_n), 
 .collect_done   (cnt_done),
 .Counts         (Counts), 
 .Hk_words       (Hk_words), 
@@ -132,7 +128,7 @@ rocket_readout u_rocket_readout(
 
 pulse_counters u_pulse_counters(
   .clk50          (clk50), 
-  .rst_n          (rst_n || Reset_cmd_n_sync), 
+  .rst_n          (rst_n), 
   .Inpulse        (Inpulse),
   .stim_cmd       (~Stim_cmd_n_sync),
   .cnt_start      (cnt_start),
@@ -144,7 +140,6 @@ pulse_counters u_pulse_counters(
 dac_adc_top u_dac_adc_top(
   .clk50          (clk50), 
   .rst_n          (rst_n), 
-  .reset_cmd      (reset_cmd), 
   .hven_cmd       (~Hven_cmd_n_sync),
   .safe_cmd       (Safe_cmd_sync),
   .dac_cmd        (5'h0f),
