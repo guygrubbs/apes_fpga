@@ -1,0 +1,89 @@
+# //  ModelSim SE 10.4b May 26 2015 Linux 3.13.0-119-generic
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+do run_stim_test.do
+# vsim -voptargs="+acc" work.tb_apes_top -L Proasic3 
+# Start time: 10:19:54 on Apr 26,2018
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+# ** Error: (vish-4014) No objects found matching '/tb_apes_top/apes_top_uut/u_rocket_readout/fsm/hven_cmd'.
+# Executing ONERROR command at macro ./stim_test_wave.do line 10
+# ** Error: (vish-4014) No objects found matching '/tb_apes_top/apes_top_uut/u_rocket_readout/fsm/reset_cmd'.
+# Executing ONERROR command at macro ./stim_test_wave.do line 11
+# ** Error: (vish-4014) No objects found matching '/tb_apes_top/apes_top_uut/u_rocket_readout/stim_cmd'.
+# Executing ONERROR command at macro ./stim_test_wave.do line 24
+do run_stim_test.do
+# End time: 10:21:00 on Apr 26,2018, Elapsed time: 0:01:06
+# Errors: 9, Warnings: 0
+# vsim -voptargs="+acc" work.tb_apes_top -L Proasic3 
+# Start time: 10:21:00 on Apr 26,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+# ** Error: (vish-4014) No objects found matching '/tb_apes_top/apes_top_uut/u_rocket_readout/fsm/hven_cmd'.
+# Executing ONERROR command at macro ./stim_test_wave.do line 10
+# ** Error: (vish-4014) No objects found matching '/tb_apes_top/apes_top_uut/u_rocket_readout/fsm/reset_cmd'.
+# Executing ONERROR command at macro ./stim_test_wave.do line 11
+# ** Error: (vish-4014) No objects found matching '/tb_apes_top/apes_top_uut/u_rocket_readout/stim_cmd'.
+# Executing ONERROR command at macro ./stim_test_wave.do line 24
+run 20 ms
+
+quit -f
+# End time: 10:25:50 on Apr 26,2018, Elapsed time: 0:04:50
+# Errors: 9, Warnings: 0

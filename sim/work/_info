@@ -1,0 +1,553 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/local/NDC/ssheikh/APES_FPGA/sim
+T_opt
+!s110 1524712466
+VV><Q;JCIfgmEUm5;j1[@]1
+Z1 04 11 4 work tb_apes_top fast 0
+=1-001ec9507300-5ae14412-40318-2980
+Z2 o-quiet -auto_acc_if_foreign -work work -L proasic3 +acc
+n@_opt
+Z3 OE;O;10.4b;61
+R0
+T_opt1
+!s110 1524755893
+V3:SLd4AfzI;hUma3^FI<H0
+R1
+=10-001ec9507300-5ae1edb5-63b69-4087
+o-quiet -auto_acc_if_foreign -work work -L Proasic3 +acc
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1524758339
+V9baX1ARXIW:jI]So@YmXE3
+04 4 4 work test fast 0
+=2-001ec9507300-5ae1f743-55459-5a4d
+R2
+n@_opt2
+R3
+vadc128s102
+!s110 1513708712
+!i10b 1
+!s100 eS5fmh5lEJBf0kF[JTWfV3
+IRJOIc`i_g16iD`Oe84P[D2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z5 w1513183789
+8adc128s102.v
+Fadc128s102.v
+Z6 L0 12
+Z7 OE;L;10.4b;61
+r1
+!s85 0
+31
+!s108 1513708712.000000
+!s107 adc128s102.v|
+!s90 adc128s102.v|
+!i113 0
+Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vapes_adc
+Z9 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+!s110 1524678013
+!i10b 1
+!s100 AOaUM?PG]mQV;3k77K3hz0
+Ind6;>PMmRHknI10z6RlO53
+R4
+!s105 apes_adc_v_unit
+S1
+R0
+w1524231680
+8/home/local/NDC/ssheikh/APES_FPGA/apes_adc.v
+F/home/local/NDC/ssheikh/APES_FPGA/apes_adc.v
+L0 30
+R7
+r1
+!s85 0
+31
+!s108 1524678013.000000
+!s107 /home/local/NDC/ssheikh/APES_FPGA/apes_adc.v|
+!s90 -##implicit##push_minusfile_path##|/home/local/NDC/ssheikh/APES_FPGA/sim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|/home/local/NDC/ssheikh/APES_FPGA/apes_adc.v|
+!i113 0
+R8
+Z10 tSvlog 1
+vapes_counter
+!s110 1513707730
+!i10b 1
+!s100 z<C57_O;_<_ffe_UF5R[F3
+IiDfT5SN[h<HO[VQ=mcY9O2
+R4
+R0
+R5
+8../apes_counter.v
+F../apes_counter.v
+Z11 L0 27
+R7
+r1
+!s85 0
+31
+!s108 1513707730.000000
+!s107 ../apes_counter.v|
+!s90 ../apes_counter.v|
+!i113 0
+R8
+vapes_dac
+Z12 !s110 1513707745
+!i10b 1
+!s100 6aQ69z=kLAa[f8>7m@Kzg1
+I0SJT=Of7IT@J`[M44YYY[1
+R4
+R0
+R5
+8../apes_dac.v
+F../apes_dac.v
+Z13 L0 24
+R7
+r1
+!s85 0
+31
+Z14 !s108 1513707745.000000
+Z15 !s107 ../apes_dac.v|../apes_dac1.v|
+Z16 !s90 ../apes_dac1.v|../apes_dac.v|
+!i113 0
+R8
+vapes_dac1
+R12
+!i10b 1
+!s100 :N4zOieGEKghXhNocT8D;3
+IKXV]f]E]ZZKe`^oWjf0Ji0
+R4
+R0
+R5
+8../apes_dac1.v
+F../apes_dac1.v
+R13
+R7
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 0
+R8
+vapes_fsm
+R9
+!s110 1524710317
+!i10b 1
+!s100 nal4PFMba[OD6E=E];g?g1
+ISQ6=YSjAWCikc`3m:elHS3
+R4
+!s105 apes_fsm_v_unit
+S1
+R0
+w1524708246
+8/home/local/NDC/ssheikh/APES_FPGA/apes_fsm.v
+F/home/local/NDC/ssheikh/APES_FPGA/apes_fsm.v
+R11
+R7
+r1
+!s85 0
+31
+!s108 1524710317.000000
+!s107 /home/local/NDC/ssheikh/APES_FPGA/apes_fsm.v|
+!s90 -##implicit##push_minusfile_path##|/home/local/NDC/ssheikh/APES_FPGA/sim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|/home/local/NDC/ssheikh/APES_FPGA/apes_fsm.v|
+!i113 0
+R8
+R10
+vapes_top
+R9
+!s110 1524712091
+!i10b 1
+!s100 VBAGOV?z_a1^P2EQ4f@EN0
+IdI2i8mg8]0g=OPNFnL;8g3
+R4
+!s105 apes_top_v_unit
+S1
+R0
+w1524712002
+8../apes_top.v
+F../apes_top.v
+L0 11
+R7
+r1
+!s85 0
+31
+!s108 1524712091.000000
+!s107 ../apes_top.v|
+!s90 -##implicit##push_minusfile_path##|/home/local/NDC/ssheikh/APES_FPGA/sim/vlog.opt|-##implicit##pop_minusfile_path##|../apes_top.v|
+!i113 0
+R8
+R10
+vclk_div
+R9
+!s110 1524174171
+!i10b 1
+!s100 o5T[<]z:7]65TbXl]6N430
+I`C=Yl`0Nz?Hhg1BERjfGU1
+R4
+!s105 clk_div_v_unit
+S1
+R0
+w1524173921
+8../clk_div.v
+F../clk_div.v
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1524174171.000000
+!s107 ../clk_div.v|
+!s90 -##implicit##push_minusfile_path##|/home/local/NDC/ssheikh/APES_FPGA/sim/vlog.opt|-##implicit##pop_minusfile_path##|../clk_div.v|
+!i113 0
+R8
+R10
+vcnt_readout
+R9
+DXx4 work 5 Types 0 22 InUWS1Gnk1XS=InT@0:5O0
+!s110 1513707914
+!i10b 1
+!s100 M9ofj=US6l6Fj5E<?<7mh3
+IEO0ggmb?DZN:I2NP<=@bf0
+R4
+!s105 cnt_readout_v_unit
+S1
+R0
+R5
+8../cnt_readout.v
+F../cnt_readout.v
+R13
+R7
+r1
+!s85 0
+31
+!s108 1513707914.000000
+!s107 ../cnt_readout.v|
+!s90 -sv|../cnt_readout.v|
+!i113 0
+o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vdac121s101
+!s110 1513708709
+!i10b 1
+!s100 i71EPDMgBJCVnEa1QY<Yl3
+IRfzLlzcFl^WIW;BonR[6_3
+R4
+R0
+R5
+8dac121s101.v
+Fdac121s101.v
+R6
+R7
+r1
+!s85 0
+31
+!s108 1513708709.000000
+!s107 dac121s101.v|
+!s90 dac121s101.v|
+!i113 0
+R8
+vdac_adc_top
+R9
+!s110 1524756577
+!i10b 1
+!s100 OBR=zoL@zHGKlMULl_72:3
+I]KzXE`9`<15X5bUZkCaa;0
+R4
+!s105 dac_adc_top_v_unit
+S1
+R0
+w1524755864
+8/home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+F/home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+L0 17
+R7
+r1
+!s85 0
+31
+!s108 1524756577.000000
+!s107 /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v|
+!s90 -##implicit##push_minusfile_path##|/home/local/NDC/ssheikh/APES_FPGA/sim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|/home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v|
+!i113 0
+R8
+R10
+vhk_readout
+R9
+DXx4 work 5 Types 0 22 =<2R4?gD9Jl>OVU:B28Di1
+!s110 1524174268
+!i10b 1
+!s100 ZhR@X2Q4m;5SQjeHb7E@n2
+I_jfMBAZzFU[R>z]j]]iJB3
+R4
+!s105 hk_readout_v_unit
+S1
+R0
+w1524173030
+8/home/local/NDC/ssheikh/APES_FPGA/hk_readout.v
+F/home/local/NDC/ssheikh/APES_FPGA/hk_readout.v
+L0 25
+R7
+r1
+!s85 0
+31
+!s108 1524174267.000000
+!s107 /home/local/NDC/ssheikh/APES_FPGA/hk_readout.v|
+!s90 -##implicit##push_minusfile_path##|/home/local/NDC/ssheikh/APES_FPGA/sim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|/home/local/NDC/ssheikh/APES_FPGA/hk_readout.v|
+!i113 0
+R8
+R10
+vparallel_shifter
+!s110 1513707984
+!i10b 1
+!s100 Oje0@EDeDJ3zNeM[kzee=1
+I>mYmk^k2iLCRAGZL?h3l[1
+R4
+R0
+R5
+8../parallel_shifter.v
+F../parallel_shifter.v
+R13
+R7
+r1
+!s85 0
+31
+!s108 1513707984.000000
+!s107 ../parallel_shifter.v|
+!s90 ../parallel_shifter.v|
+!i113 0
+R8
+vpulse_counters
+R9
+!s110 1524712228
+!i10b 1
+!s100 FfY[[ee4@FJgkg1ZgJbBl2
+IJiO<L6[TMon?cj3GP:C3_1
+R4
+!s105 pulse_counters_v_unit
+S1
+R0
+w1524173190
+8../pulse_counters.v
+F../pulse_counters.v
+L0 16
+R7
+r1
+!s85 0
+31
+!s108 1524712228.000000
+!s107 ../pulse_counters.v|
+!s90 -##implicit##push_minusfile_path##|/home/local/NDC/ssheikh/APES_FPGA/sim/vlog.opt|-##implicit##pop_minusfile_path##|../pulse_counters.v|
+!i113 0
+R8
+R10
+vpulse_gen
+R9
+Z17 !s110 1524174119
+!i10b 1
+!s100 g5]Hff2JX;`f7BP^0gSf:1
+IPVD6f_LFh0KJ;DO5GD3:A1
+R4
+!s105 utils_v_unit
+S1
+R0
+Z18 w1524172984
+Z19 8../utils.v
+Z20 F../utils.v
+L0 26
+R7
+r1
+!s85 0
+31
+Z21 !s108 1524174119.000000
+Z22 !s107 ../utils.v|
+Z23 !s90 -##implicit##push_minusfile_path##|/home/local/NDC/ssheikh/APES_FPGA/sim/vlog.opt|-##implicit##pop_minusfile_path##|../utils.v|
+!i113 0
+R8
+R10
+vrocket_readout
+R9
+!s110 1524710153
+!i10b 1
+!s100 UGTkLKZ4>J:6m]f?3laMB0
+IYK3HWCFh_]VE3kM`hSXE33
+R4
+!s105 rocket_readout_v_unit
+S1
+R0
+w1524708655
+8../rocket_readout.v
+F../rocket_readout.v
+L0 19
+R7
+r1
+!s85 0
+31
+!s108 1524710153.000000
+!s107 ../rocket_readout.v|
+!s90 -##implicit##push_minusfile_path##|/home/local/NDC/ssheikh/APES_FPGA/sim/vlog.opt|-##implicit##pop_minusfile_path##|../rocket_readout.v|
+!i113 0
+R8
+R10
+vsync
+!s110 1513708098
+!i10b 1
+!s100 _:BOXa7WQ?XHSNL:D^_C]1
+IOWgOWViPKOl5NWo]=U@mj0
+R4
+R0
+R5
+8../sync.v
+F../sync.v
+L0 4
+R7
+r1
+!s85 0
+31
+!s108 1513708098.000000
+!s107 ../sync.v|
+!s90 ../sync.v|
+!i113 0
+R8
+vsynch_timer
+!s110 1513708054
+!i10b 1
+!s100 dcEW@]8P3SR2heZlig7463
+IW]>@0czjnGlR5^D5_oohH1
+R4
+R0
+R5
+8../synch_timer.v
+F../synch_timer.v
+L0 4
+R7
+r1
+!s85 0
+31
+!s108 1513708054.000000
+!s107 ../synch_timer.v|
+!s90 ../synch_timer.v|
+!i113 0
+R8
+vsyncn
+!s110 1513708094
+!i10b 1
+!s100 GMgZG<U>oiePGiP4A9;j;0
+IlE<fZDce0cShhGehPgL8X1
+R4
+R0
+R5
+8../syncn.v
+F../syncn.v
+L0 5
+R7
+r1
+!s85 0
+31
+!s108 1513708094.000000
+!s107 ../syncn.v|
+!s90 ../syncn.v|
+!i113 0
+R8
+vtb_apes_top
+R9
+!s110 1524752436
+!i10b 1
+!s100 =JE^KFEU=[>:7lELgWAXe0
+IkKF>cBnFoC]@>e=0fZGCQ3
+R4
+!s105 tb_apes_top_v_unit
+S1
+R0
+w1524752430
+8../tb_apes_top.v
+F../tb_apes_top.v
+L0 3
+R7
+r1
+!s85 0
+31
+!s108 1524752435.000000
+!s107 ../tb_apes_top.v|
+!s90 -##implicit##push_minusfile_path##|/home/local/NDC/ssheikh/APES_FPGA/sim/vlog.opt|-##implicit##pop_minusfile_path##|../tb_apes_top.v|
+!i113 0
+R8
+R10
+vtest
+R9
+!s110 1524758335
+!i10b 1
+!s100 Y?4NmANHg;<aHfUSz=ogE0
+IQY?aO_zH]8Ge^SemGa:L^0
+R4
+!s105 test_v_unit
+S1
+R0
+w1524758332
+8/home/local/NDC/ssheikh/APES_FPGA/sim/test.v
+F/home/local/NDC/ssheikh/APES_FPGA/sim/test.v
+L0 7
+R7
+r1
+!s85 0
+31
+!s108 1524758335.000000
+!s107 /home/local/NDC/ssheikh/APES_FPGA/sim/test.v|
+!s90 -##implicit##push_minusfile_path##|/home/local/NDC/ssheikh/APES_FPGA/sim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|/home/local/NDC/ssheikh/APES_FPGA/sim/test.v|
+!i113 0
+Z24 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R10
+vtestpulse
+R9
+!s110 1513708895
+!i10b 1
+!s100 TN3Xo>4f]W1d5M>S7mN];1
+IBPQYf3DYdYCTg=MFMQD`K0
+R4
+!s105 testpulse_v_unit
+S1
+R0
+R5
+8/home/local/NDC/ssheikh/APES_FPGA/testpulse.v
+F/home/local/NDC/ssheikh/APES_FPGA/testpulse.v
+L0 22
+R7
+r1
+!s85 0
+31
+!s108 1513708895.000000
+!s107 /home/local/NDC/ssheikh/APES_FPGA/testpulse.v|
+!s90 -##implicit##push_minusfile_path##|/home/local/NDC/ssheikh/APES_FPGA/sim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|/home/local/NDC/ssheikh/APES_FPGA/testpulse.v|
+!i113 0
+R24
+R10
+XTypes
+R9
+R17
+!i10b 1
+!s100 3b?dRRg?bfn1OC5]J4WIM2
+I=<2R4?gD9Jl>OVU:B28Di1
+V=<2R4?gD9Jl>OVU:B28Di1
+S1
+R0
+R18
+R19
+R20
+L0 6
+R7
+r1
+!s85 0
+31
+R21
+R22
+R23
+!i113 0
+R8
+R10
+n@types

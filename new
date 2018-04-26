@@ -1,0 +1,33 @@
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   apes_fsm.v
+	modified:   apes_top.v
+	modified:   cnt_readout.v
+	modified:   dac_adc_top.v
+	modified:   rocket_readout.v
+	modified:   tags
+	modified:   tb_apes_top.v
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	blah
+	blah1
+	new
+	sim/mcp_wave.do
+	sim/modelsim.ini
+	sim/proasic3/
+	sim/run_stim_test.do
+	sim/run_stim_test.do.bak
+	sim/stim_test_wave.do
+	sim/transcript
+	sim/vlog.opt
+	sim/vsim.wlf
+	sim/work/
+
+no changes added to commit (use "git add" and/or "git commit -a")

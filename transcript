@@ -1,0 +1,702 @@
+# //  ModelSim SE 10.4b May 26 2015 Linux 3.13.0-119-generic
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+cd /home/local/NDC/ssheikh/APES_FPGA/sim
+# reading modelsim.ini
+dir
+# adc128s102.v  modelsim.ini  run_stim_test.do	  transcript  wave.do
+# dac121s101.v  proasic3	    run_stim_test.do.bak  vlog.opt    work
+# mcp_wave.do   proasic3.v    stim_test_wave.do	  vsim.wlf
+do run_stim_test.do
+# vsim -voptargs="+acc" work.tb_apes_top -L Proasic3 
+# Start time: 10:26:59 on Apr 26,2018
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+# ** Error: (vish-4014) No objects found matching '/tb_apes_top/apes_top_uut/u_rocket_readout/fsm/hven_cmd'.
+# Executing ONERROR command at macro ./stim_test_wave.do line 10
+# ** Error: (vish-4014) No objects found matching '/tb_apes_top/apes_top_uut/u_rocket_readout/fsm/reset_cmd'.
+# Executing ONERROR command at macro ./stim_test_wave.do line 11
+# ** Error: (vish-4014) No objects found matching '/tb_apes_top/apes_top_uut/u_rocket_readout/stim_cmd'.
+# Executing ONERROR command at macro ./stim_test_wave.do line 24
+add wave -position 7  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/dac_rst
+add wave -position 8  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/regw_pls
+add wave -position 9  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/Lcla
+add wave -position 10  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/Lcld
+add wave -position 11  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/Dac_clk
+add wave -position 12  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/Dac_dat
+add wave -position 13  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/CTRL_ENn
+
+restart -f; run 500 us
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+vlog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+# Model Technology ModelSim SE vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 10:40:06 on Apr 26,2018
+# vlog -reportprogress 300 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v 
+# -- Compiling module dac_adc_top
+# ** Error (suppressible): /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v(200): (vlog-2388) 'thresh_dac_pulse' already declared in this scope (dac_adc_top).
+# ** Error: /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v(206): (vlog-2730) Undefined variable: 'th_dac_sm'.
+# ** Error: /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v(209): (vlog-2730) Undefined variable: 'th_dac_sm'.
+# ** Error: (vlog-13069) /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v(209): near ":": syntax error, unexpected ':'.
+# ** Error: /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v(212): (vlog-13205) Syntax error found in the scope following 'th_dac_sm'. Is there a missing '::'?
+# End time: 10:40:06 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# /usr/local/ModelSim/ModelSim_SE_10.4b/modeltech/linux/vlog failed.
+vlog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+# Model Technology ModelSim SE vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 10:41:10 on Apr 26,2018
+# vlog -reportprogress 300 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v 
+# -- Compiling module dac_adc_top
+# ** Error (suppressible): /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v(200): (vlog-2388) 'thresh_dac_pulse' already declared in this scope (dac_adc_top).
+# ** Error: (vlog-13069) /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v(209): near ":": syntax error, unexpected ':'.
+# ** Error: /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v(212): (vlog-13205) Syntax error found in the scope following 'th_dac_sm'. Is there a missing '::'?
+# End time: 10:41:10 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# /usr/local/ModelSim/ModelSim_SE_10.4b/modeltech/linux/vlog failed.
+vlog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+# Model Technology ModelSim SE vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 10:41:21 on Apr 26,2018
+# vlog -reportprogress 300 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v 
+# -- Compiling module dac_adc_top
+# ** Error (suppressible): /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v(200): (vlog-2388) 'thresh_dac_pulse' already declared in this scope (dac_adc_top).
+# End time: 10:41:21 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /usr/local/ModelSim/ModelSim_SE_10.4b/modeltech/linux/vlog failed.
+vlog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+# Model Technology ModelSim SE vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 10:42:05 on Apr 26,2018
+# vlog -reportprogress 300 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v 
+# -- Compiling module dac_adc_top
+# 
+# Top level modules:
+# 	dac_adc_top
+# End time: 10:42:05 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f;
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+add wave -position 8  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/th_dac_sm
+add wave -position 9  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/thresh_dac_pulse
+
+
+history
+#      1  cd /home/local/NDC/ssheikh/APES_FPGA/sim
+#      2  dir
+#      3  do run_stim_test.do
+#      4  add wave -position 7  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/dac_rst
+#      5  add wave -position 8  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/regw_pls
+#      6  add wave -position 9  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/Lcla
+#      7  add wave -position 10  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/Lcld
+#      8  add wave -position 11  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/Dac_clk
+#      9  add wave -position 12  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/Dac_dat
+#     10  add wave -position 13  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/CTRL_ENn
+#     11  restart -f; run 500 us
+#     12  vlog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+#     13  restart -f;
+#     14  add wave -position 8  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/th_dac_sm
+#     15  add wave -position 9  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/thresh_dac_pulse
+#     16  history
+run 500 us
+vlog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+# Model Technology ModelSim SE vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 10:44:04 on Apr 26,2018
+# vlog -reportprogress 300 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v 
+# -- Compiling module dac_adc_top
+# 
+# Top level modules:
+# 	dac_adc_top
+# End time: 10:44:05 on Apr 26,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart -f; run 200 us
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+add wave -position 8  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/clk195khz
+restart -f; run 200 us
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+vlog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+# Model Technology ModelSim SE vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 10:47:05 on Apr 26,2018
+# vlog -reportprogress 300 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v 
+# -- Compiling module dac_adc_top
+# 
+# Top level modules:
+# 	dac_adc_top
+# End time: 10:47:05 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 200 us
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+add wave -position 12  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/pa_cnt_dclk
+add wave -position 13  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/dac_en_n
+restart -f; run 100 us
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+add wave -position 12  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/pa_sm_dac
+restart -f; run 100 us
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+force -freeze sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/dac_rst 1'h1 0
+run 20 us
+force -freeze sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/dac_rst 1'h0 0
+run 5 us
+run 5 us
+run 5 us
+run 5 us
+run 5 us
+run 5 us
+run 5 us
+force -freeze sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/dac_rst 1'h1 0
+run 30 us
+run 30 us
+history
+#      1  cd /home/local/NDC/ssheikh/APES_FPGA/sim
+#      2  dir
+#      3  do run_stim_test.do
+#      4  add wave -position 7  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/dac_rst
+#      5  add wave -position 8  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/regw_pls
+#      6  add wave -position 9  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/Lcla
+#      7  add wave -position 10  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/Lcld
+#      8  add wave -position 11  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/Dac_clk
+#      9  add wave -position 12  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/Dac_dat
+#     10  add wave -position 13  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/CTRL_ENn
+#     11  restart -f; run 500 us
+#     12  vlog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+#     13  restart -f;
+#     14  add wave -position 8  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/th_dac_sm
+#     15  add wave -position 9  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/thresh_dac_pulse
+#     16  history
+#     17  run 500 us
+#     18  vlog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+#     19  restart -f; run 200 us
+#     20  add wave -position 8  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/clk195khz
+#     21  restart -f; run 200 us
+#     22  vlog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+#     23  restart -f; run 200 us
+#     24  add wave -position 12  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/pa_cnt_dclk
+#     25  add wave -position 13  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/dac_en_n
+#     26  restart -f; run 100 us
+#     27  add wave -position 12  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/pa_sm_dac
+#     28  restart -f; run 100 us
+#     29  force -freeze sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/dac_rst 1'h1 0
+#     30  run 20 us
+#     31  force -freeze sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/dac_rst 1'h0 0
+#     32  run 5 us
+#     33  force -freeze sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/DAC1/dac_rst 1'h1 0
+#     34  run 30 us
+#     35  history
+!12
+# vlog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+# Model Technology ModelSim SE vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 11:17:17 on Apr 26,2018
+# vlog -reportprogress 300 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v 
+# -- Compiling module dac_adc_top
+# 
+# Top level modules:
+# 	dac_adc_top
+# End time: 11:17:17 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 200 us
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "apes_dac1(fast)".
+# Loading sv_std.std
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac1(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+vlog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+# Model Technology ModelSim SE vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 11:18:11 on Apr 26,2018
+# vlog -reportprogress 300 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v 
+# -- Compiling module dac_adc_top
+# 
+# Top level modules:
+# 	dac_adc_top
+# End time: 11:18:11 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 200 us
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+add wave -position 21  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/start_mcp/dac_rst
+add wave -position 22  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/start_mcp/regw_pls
+add wave -position 23  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/start_mcp/Lcla
+add wave -position 24  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/start_mcp/Lcld
+add wave -position 25  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/start_mcp/Dac_clk
+add wave -position 26  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/start_mcp/Dac_dat
+add wave -position 27  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/start_mcp/CTRL_ENn
+add wave -position 28  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/start_mcp/pa_sm_dac_out
+add wave -position 29  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/start_mcp/dac_reg
+add wave -position 30  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/start_mcp/pa_cnt_dclk
+add wave -position 31  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/start_mcp/pa_sm_dac
+add wave -position 32  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/start_mcp/pa_dac_init
+add wave -position 33  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/start_mcp/dac_en_n
+restart -f; run 200 us
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+run 200 us
+run 200 us
+run 200 us
+run 1 ms
+add wave -position 21  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/cnt_dac_24b
+restart -f; run 200 us
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+
+
+rsrestart 
+# invalid command name "rsrestart"
+restart -f;
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+run 2 us
+force -freeze sim:/tb_apes_top/Safe_cmd 1'h1 0
+force -freeze sim:/tb_apes_top/Hven_cmd_n 1'h1 0
+force -freeze sim:/tb_apes_top/Safe_cmd 1'h0 0
+run 2 us
+run 2 us
+add wave -position 8  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/hven_cmd
+add wave -position 9  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/safe_cmd
+add wave -position 9  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/safe_cmd
+run 2 us
+force -freeze sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/hven_cmd 1'h1 0
+
+
+run 2 us
+vlog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v
+# Model Technology ModelSim SE vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 11:29:37 on Apr 26,2018
+# vlog -reportprogress 300 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact /home/local/NDC/ssheikh/APES_FPGA/dac_adc_top.v 
+# -- Compiling module dac_adc_top
+# 
+# Top level modules:
+# 	dac_adc_top
+# End time: 11:29:37 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 2 us
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_apes_top(fast)
+# Loading work.apes_top(fast)
+# Loading Proasic3.BUFD(fast)
+# Loading Proasic3.CLKBUF(fast)
+# Loading work.sync(fast)
+# Loading work.rocket_readout(fast)
+# Loading work.syncn(fast)
+# Loading work.Types(fast)
+# Loading work.hk_readout(fast)
+# Loading work.parallel_shifter(fast)
+# Loading work.apes_fsm(fast)
+# Loading work.cnt_readout(fast)
+# Loading work.pulse_counters(fast)
+# Loading work.apes_counter(fast)
+# Loading work.synch_timer(fast)
+# Loading work.testpulse(fast)
+# Loading work.dac_adc_top(fast)
+# Loading work.apes_dac(fast)
+# Loading work.apes_adc(fast)
+# Loading Proasic3.CLKINT(fast)
+# Loading work.clk_div(fast)
+# Loading work.dac121s101(fast)
+# Loading work.adc128s102(fast)
+add wave -position 8  sim:/tb_apes_top/apes_top_uut/u_dac_adc_top/hven
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+quit -sim
+# End time: 11:49:52 on Apr 26,2018, Elapsed time: 1:22:53
+# Errors: 19, Warnings: 0
+vlog -reportprogress 300 -work work /home/local/NDC/ssheikh/APES_FPGA/sim/test.v
+# Model Technology ModelSim SE vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 11:54:43 on Apr 26,2018
+# vlog -reportprogress 300 -work work /home/local/NDC/ssheikh/APES_FPGA/sim/test.v 
+# -- Compiling module test
+# 
+# Top level modules:
+# 	test
+# End time: 11:54:44 on Apr 26,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.test
+# vsim -voptargs="+acc" work.test 
+# Start time: 11:54:48 on Apr 26,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: /home/local/NDC/ssheikh/APES_FPGA/sim/test.v(17): Module 'CLKINT' is not defined.
+# Optimization failed
+# Error loading design
+# End time: 11:54:48 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim -voptargs=+acc work.test -L proasic3
+# vsim -voptargs="+acc" work.test -L proasic3 
+# Start time: 11:54:57 on Apr 26,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.test(fast)
+# Loading proasic3.CLKINT(fast)
+add wave *
+run 1 us
+run 1 us
+vlog -reportprogress 300 -work work /home/local/NDC/ssheikh/APES_FPGA/sim/test.v
+# Model Technology ModelSim SE vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 11:57:58 on Apr 26,2018
+# vlog -reportprogress 300 -work work /home/local/NDC/ssheikh/APES_FPGA/sim/test.v 
+# -- Compiling module test
+# ** Error: (vlog-13069) /home/local/NDC/ssheikh/APES_FPGA/sim/test.v(10): near ";": syntax error, unexpected ';'.
+# ** Error: /home/local/NDC/ssheikh/APES_FPGA/sim/test.v(10): (vlog-13205) Syntax error found in the scope following 'resetn_in'. Is there a missing '::'?
+# End time: 11:57:58 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /usr/local/ModelSim/ModelSim_SE_10.4b/modeltech/linux/vlog failed.
+vlog -reportprogress 300 -work work /home/local/NDC/ssheikh/APES_FPGA/sim/test.v
+# Model Technology ModelSim SE vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 11:58:20 on Apr 26,2018
+# vlog -reportprogress 300 -work work /home/local/NDC/ssheikh/APES_FPGA/sim/test.v 
+# -- Compiling module test
+# ** Error: /home/local/NDC/ssheikh/APES_FPGA/sim/test.v(49): (vlog-2110) Illegal reference to net "gse_resetn".
+# End time: 11:58:21 on Apr 26,2018, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# /usr/local/ModelSim/ModelSim_SE_10.4b/modeltech/linux/vlog failed.
+vlog -reportprogress 300 -work work /home/local/NDC/ssheikh/APES_FPGA/sim/test.v
+# Model Technology ModelSim SE vlog 10.4b Compiler 2015.05 May 26 2015
+# Start time: 11:58:55 on Apr 26,2018
+# vlog -reportprogress 300 -work work /home/local/NDC/ssheikh/APES_FPGA/sim/test.v 
+# -- Compiling module test
+# 
+# Top level modules:
+# 	test
+# End time: 11:58:55 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f; run 1 us
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.test(fast)
+# Loading proasic3.CLKINT(fast)
+run 5 us
+# Causality operation skipped due to absence of debug database file
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run 800 ms
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run 400 ms
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+
+
+run 400 ms
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
